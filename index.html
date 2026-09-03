@@ -248,6 +248,68 @@
     line-height:1.7;
   }
 
+  /* PROJECTS */
+  .project-grid{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap:24px;
+  }
+  .project-card{
+    background:rgba(255,255,255,0.3);
+    border:1px solid var(--line);
+    border-top:2px solid var(--amber);
+    padding:24px 22px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    min-height:100%;
+  }
+  .project-card .meta{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    align-items:center;
+  }
+  .project-card .tag{
+    color:var(--amber-deep);
+    background:rgba(181,119,47,0.08);
+    border:1px solid rgba(181,119,47,0.2);
+    padding:6px 8px;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  .project-card h3{
+    font-size:1.25rem;
+    line-height:1.3;
+  }
+  .project-card p{
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .project-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .project-card li{
+    border:1px solid var(--line);
+    background:rgba(33,23,18,0.02);
+    padding:6px 8px;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .project-card .impact{
+    margin-top:auto;
+    color:var(--ink);
+    font-weight:600;
+    font-size:0.95rem;
+  }
+
   /* EXPERIENCE TIMELINE */
   .timeline{
     display:flex;
@@ -357,7 +419,7 @@
     .fhole-wrap{ order:-1; }
     .fhole-wrap svg{ max-width:104px; }
     .hero h1{ font-size:2.3rem; }
-    .about-grid, .skills-grid, .edu-grid{ grid-template-columns:1fr; gap:28px; }
+    .about-grid, .skills-grid, .edu-grid, .project-grid{ grid-template-columns:1fr; gap:28px; }
     .role-block{ grid-template-columns:1fr; gap:10px; }
     section{ padding-top:72px; }
   }
@@ -392,6 +454,7 @@
       <nav class="rail-nav mono">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -483,11 +546,66 @@
       </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <span class="count mono">03</span>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="meta">
+            <span class="tag mono">Data</span>
+            <span class="mono">Postgres</span>
+          </div>
+          <h3>DNS Management Platform Schema</h3>
+          <p>Created a relational data model for managing domains, zone records, ownership, and customer-level access with clear constraints and scalable relationships.</p>
+          <ul>
+            <li>Schema Design</li>
+            <li>PostgreSQL</li>
+            <li>Modeling</li>
+            <li>Supabase</li>
+          </ul>
+          <div class="impact">Supported safe growth and cleaner domain operations.</div>
+        </article>
+
+        <article class="project-card">
+          <div class="meta">
+            <span class="tag mono">Security</span>
+            <span class="mono">Auth0</span>
+          </div>
+          <h3>Auth0 Integration</h3>
+          <p>Implemented secure authentication and authorization patterns for customer-facing and internal workflows, reducing manual access handling and improving account consistency.</p>
+          <ul>
+            <li>Auth0</li>
+            <li>JWT</li>
+            <li>RBAC</li>
+          </ul>
+          <div class="impact">Hardened user access and simplified security operations.</div>
+        </article>
+
+        <article class="project-card">
+          <div class="meta">
+            <span class="tag mono">Billing</span>
+            <span class="mono">Stripe</span>
+          </div>
+          <h3>Custom pricing engine</h3>
+          <p>Developed a custom pricing engine that leverages Stripe to map products, tiers, and customer rules into a configurable billing workflow for flexible subscription logic.</p>
+          <ul>
+            <li>Stripe</li>
+            <li>Billing</li>
+            <li>Rules Engine</li>
+          </ul>
+          <div class="impact">Enabled flexible plans without hard-coded pricing logic.</div>
+        </article>
+      </div>
+    </section>
+
     <!-- EXPERIENCE -->
     <section id="experience">
       <div class="section-head">
         <h2>Experience</h2>
-        <span class="count mono">03</span>
+        <span class="count mono">04</span>
       </div>
       <div class="timeline">
 
@@ -549,7 +667,7 @@
     <section id="education">
       <div class="section-head">
         <h2>Education</h2>
-        <span class="count mono">04</span>
+        <span class="count mono">05</span>
       </div>
       <div class="edu-grid">
         <div class="edu-card">
@@ -577,7 +695,7 @@
     <section id="contact" class="contact">
       <div class="section-head">
         <h2 style="font-size:1.7rem;">Contact</h2>
-        <span class="count mono">05</span>
+        <span class="count mono">06</span>
       </div>
       <h2>Building something that needs both sides of this — let's talk.</h2>
       <div class="contact-links mono">
